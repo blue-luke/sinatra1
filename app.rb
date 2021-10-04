@@ -16,3 +16,7 @@ end
 get '/public/news' do
   'Interest rates are up'
 end
+
+get '/cat' do
+  img src="https://i.imgur.com/jFaSxym.png"
+end
