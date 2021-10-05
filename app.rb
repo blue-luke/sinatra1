@@ -17,6 +17,17 @@ get '/public/news' do
   'Interest rates are up'
 end
 
-get '/cat' do
-  "<img src='https://i.imgur.com/jFaSxym.png' style='border: 5px solid red; border-style: dashed'>"
+get '/random-cat' do
+  @random_name = ["Amigo", "Misty", "Almond"].sample
+  @current_time = Time.new
+  erb(:index)
 end
+
+get '/named-cat' do
+  p params
+  @random_name = params[:name]
+  @current_time = Time.new
+  erb(:index)
+end
+
+
